@@ -16,5 +16,4 @@ class CreatePostService(
 
         return PostResponse("success")
     }
-
 }
