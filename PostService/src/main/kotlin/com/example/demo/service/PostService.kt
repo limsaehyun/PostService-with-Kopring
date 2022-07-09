@@ -2,6 +2,7 @@ package com.example.demo.service
 
 import com.example.demo.controller.dto.GetPostResponse
 import com.example.demo.controller.dto.PostRequest
+import com.example.demo.controller.mapper.toData
 import com.example.demo.entity.PostEntity
 import com.example.demo.entity.repository.PostRepository
 import org.springframework.data.repository.findByIdOrNull
@@ -26,18 +27,4 @@ class PostService(
             it.toData()
         }
     }
-
-    private fun PostEntity.toData(): GetPostResponse =
-            GetPostResponse(
-                    id = id,
-                    title = title,
-                    content = content
-            )
-
-    private fun PostRequest.toData(): PostEntity =
-            PostEntity(
-                    id = 0,
-                    title = title,
-                    content = content
-            )
 }
