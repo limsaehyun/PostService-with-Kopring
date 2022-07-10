@@ -1,4 +1,4 @@
-package com.example.demo.controller.dto
+package com.example.demo.payload.request
 
 data class PostRequest(
         val title: String,

@@ -1,17 +1,17 @@
-package com.example.demo.controller.mapper
+package com.example.demo.mapper
 
-import com.example.demo.controller.dto.GetPostResponse
-import com.example.demo.controller.dto.PostRequest
+import com.example.demo.payload.response.GetPostResponse
+import com.example.demo.payload.request.PostRequest
 import com.example.demo.entity.PostEntity
 
-fun PostEntity.toData(): GetPostResponse =
+fun PostEntity.toEntity(): GetPostResponse =
         GetPostResponse(
                 id = id,
                 title = title,
                 content = content
         )
 
-fun PostRequest.toData(): PostEntity =
+fun PostRequest.toEntity(): PostEntity =
         PostEntity(
                 id = 0,
                 title = title,

@@ -1,4 +1,4 @@
-package com.example.demo.controller.dto
+package com.example.demo.payload.response
 
 data class GetPostResponse(
         val id: Int,
