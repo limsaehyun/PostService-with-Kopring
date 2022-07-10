@@ -10,9 +10,14 @@ class PostEntity(
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val id: Int,
+        var id: Int,
 
-        val title: String,
+        var title: String,
 
-        val content: String
-)
+        var content: String
+) {
+        fun update(title: String, content: String) {
+                this.title = title
+                this.content = content
+        }
+}
