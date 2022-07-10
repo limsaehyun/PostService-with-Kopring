@@ -1,5 +1,6 @@
-package com.example.demo.entity
+package com.example.demo.domain.post.entity
 
+import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
@@ -12,6 +13,7 @@ class PostEntity(
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Int,
 
+        @Column(length = 20)
         var title: String,
 
         var content: String

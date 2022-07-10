@@ -1,4 +1,4 @@
-package com.example.demo.payload.response
+package com.example.demo.domain.post.payload.response
 
 data class GetPostResponse(
         val id: Int,

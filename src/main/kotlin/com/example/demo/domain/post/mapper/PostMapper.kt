@@ -1,8 +1,8 @@
-package com.example.demo.mapper
+package com.example.demo.domain.post.mapper
 
-import com.example.demo.payload.response.GetPostResponse
-import com.example.demo.payload.request.PostRequest
-import com.example.demo.entity.PostEntity
+import com.example.demo.domain.post.payload.response.GetPostResponse
+import com.example.demo.domain.post.payload.request.SavePostRequest
+import com.example.demo.domain.post.entity.PostEntity
 
 fun PostEntity.toEntity(): GetPostResponse =
         GetPostResponse(
@@ -11,7 +11,7 @@ fun PostEntity.toEntity(): GetPostResponse =
                 content = content
         )
 
-fun PostRequest.toEntity(): PostEntity =
+fun SavePostRequest.toEntity(): PostEntity =
         PostEntity(
                 id = 0,
                 title = title,
