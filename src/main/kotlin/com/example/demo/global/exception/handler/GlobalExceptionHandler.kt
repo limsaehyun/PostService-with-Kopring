@@ -1,14 +1,21 @@
 package com.example.demo.global.exception.handler
 
 import com.example.demo.global.exception.GlobalException
+import com.example.demo.global.exception.error.InvalidMethodArgumentException
 import com.example.demo.global.payload.BaseResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
 
 @RestControllerAdvice
 class GlobalExceptionHandler {
+
+    @ExceptionHandler(MethodArgumentNotValidException::class)
+    fun methodArgumentValid(): ResponseEntity<BaseResponse<Unit>> {
+        return handleException(InvalidMethodArgumentException.EXCEPTION)
+    }
 
     @ExceptionHandler(GlobalException::class)
     fun globalException(
