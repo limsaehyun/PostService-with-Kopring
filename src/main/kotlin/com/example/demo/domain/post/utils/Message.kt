@@ -6,4 +6,6 @@ object Message {
     const val GET_POST_LIST_SUCCESS_MESSAGE = "Post List Get Success!"
     const val UPDATE_POST_SUCCESS_MESSAGE = "Post Update Success!"
     const val DELETE_POST_SUCCESS_MESSAGE = "Post Delete Success!"
+
+    const val POST_NOT_FOUND_ERROR = "Post Not Found"
 }

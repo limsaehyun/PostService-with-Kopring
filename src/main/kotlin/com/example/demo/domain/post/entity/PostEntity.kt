@@ -8,18 +8,23 @@ import javax.persistence.Id
 
 @Entity
 class PostEntity(
-
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        var id: Int,
-
-        @Column(length = 20)
-        var title: String,
-
-        var content: String
+        title: String,
+        content: String
 ) {
-        fun update(title: String, content: String) {
-                this.title = title
-                this.content = content
-        }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    val id: Int = 0
+
+    @Column(length = 20)
+    var title = title
+        protected set
+
+    var content = content
+        protected set
+
+    fun update(title: String, content: String) {
+        this.title = title
+        this.content = content
+    }
 }

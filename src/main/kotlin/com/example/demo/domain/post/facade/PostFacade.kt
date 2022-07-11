@@ -2,7 +2,6 @@ package com.example.demo.domain.post.facade
 
 import com.example.demo.domain.post.entity.PostEntity
 import com.example.demo.domain.post.exception.PostNotFoundException
-import com.example.demo.domain.post.exception.error.PostErrorCode
 import com.example.demo.domain.post.repository.PostRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Component
