@@ -1,8 +1,8 @@
 package com.example.demo.domain.post.service
 
+import com.example.demo.domain.post.entity.PostEntity
 import com.example.demo.domain.post.payload.request.SavePostRequest
 import com.example.demo.domain.post.payload.response.SavePostResponse
-import com.example.demo.domain.post.mapper.toEntity
 import com.example.demo.domain.post.repository.PostRepository
 import com.example.demo.domain.post.utils.Message
 import com.example.demo.global.payload.BaseResponse
@@ -25,4 +25,10 @@ class SavePostService(
                 responseContent
         )
     }
+
+    private fun SavePostRequest.toEntity(): PostEntity =
+            PostEntity(
+                    title = title,
+                    content = content
+            )
 }

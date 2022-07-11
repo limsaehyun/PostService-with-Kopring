@@ -1,6 +1,6 @@
 package com.example.demo.domain.post.service
 
-import com.example.demo.domain.post.mapper.toEntity
+import com.example.demo.domain.post.entity.PostEntity
 import com.example.demo.domain.post.payload.response.GetPostResponse
 import com.example.demo.domain.post.repository.PostRepository
 import com.example.demo.domain.post.utils.Message.GET_POST_LIST_SUCCESS_MESSAGE
@@ -21,4 +21,11 @@ class GetPostListService(
                 content = postListEntity
         )
     }
+
+    private fun PostEntity.toEntity(): GetPostResponse =
+            GetPostResponse(
+                    id = id,
+                    title = title,
+                    content = content
+            )
 }
