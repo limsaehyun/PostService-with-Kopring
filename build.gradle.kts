@@ -26,6 +26,8 @@ dependencies {
 	runtimeOnly(Dependencies.MYSQL_DRIVER)
 	implementation(Dependencies.KOTLIN_STDLIB)
 	implementation(Dependencies.KOTLIN_REFLECT)
+	implementation(Dependencies.SPRING_SECURITY)
+	implementation(Dependencies.SPRING_TEST)
 }
 
 tasks.withType<KotlinCompile> {

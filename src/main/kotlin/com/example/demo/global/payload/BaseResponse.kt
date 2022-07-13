@@ -1,7 +1,6 @@
 package com.example.demo.global.payload
 
 import com.example.demo.global.exception.GlobalException
-import com.fasterxml.jackson.annotation.JsonAlias
 import com.fasterxml.jackson.annotation.JsonInclude
 
 class BaseResponse<T>(
